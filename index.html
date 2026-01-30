@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serenity Spa & Skincare | Luxury Wellness Experience</title>
+    <title>Marylee Marre Functional Medicine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,860 +12,670 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #8B7355;
-            --secondary: #D4C4B5;
-            --accent: #C9A86C;
-            --dark: #3D3D3D;
-            --light: #FAF7F4;
-            --white: #FFFFFF;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #374151;
+            background: #fff;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem 5%;
+        /* Header */
+        .header {
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #f3f4f6;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 300;
-            color: var(--primary);
-            letter-spacing: 3px;
+            font-weight: 500;
+            color: #1f2937;
+            font-size: 15px;
+            letter-spacing: -0.3px;
         }
 
-        .nav-links {
+        .nav {
             display: flex;
-            list-style: none;
-            gap: 2rem;
+            gap: 40px;
+            align-items: center;
         }
 
-        .nav-links a {
+        .nav a {
             text-decoration: none;
-            color: var(--dark);
+            color: #6b7280;
+            font-size: 14px;
             font-weight: 400;
-            transition: color 0.3s;
-            letter-spacing: 1px;
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--accent);
+        .nav a:hover {
+            color: #1f2937;
+        }
+
+        .book-btn {
+            background: #1f2937;
+            color: #fff !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .book-btn:hover {
+            background: #374151;
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(139, 115, 85, 0.3), rgba(139, 115, 85, 0.5)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23e8e0d8" width="1200" height="800"/><circle cx="200" cy="600" r="300" fill="%23d4c4b5" opacity="0.5"/><circle cx="1000" cy="200" r="250" fill="%23c9a86c" opacity="0.3"/><circle cx="600" cy="400" r="200" fill="%238B7355" opacity="0.2"/></svg>');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
+            padding: 80px 60px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 0.8fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-content h3 {
+            color: #9ca3af;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin-bottom: 12px;
         }
 
         .hero-content h1 {
-            font-size: 4rem;
-            font-weight: 300;
-            letter-spacing: 8px;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 42px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content .subtitle {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-bottom: 24px;
         }
 
         .hero-content p {
-            font-size: 1.3rem;
-            letter-spacing: 3px;
-            margin-bottom: 2rem;
-            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #6b7280;
+            margin-bottom: 32px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 1rem 3rem;
-            background: var(--accent);
-            color: var(--white);
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: all 0.3s;
-            border: 2px solid var(--accent);
+        .cta-btn {
+            background: #c9a87c;
+            color: #fff;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
         }
 
-        .btn:hover {
-            background: transparent;
-            color: var(--white);
+        .cta-btn:hover {
+            background: #b8956a;
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--white);
-        }
-
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--dark);
-        }
-
-        /* Sections */
-        section {
-            padding: 6rem 10%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: var(--primary);
-            letter-spacing: 5px;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: var(--dark);
-            font-size: 1.1rem;
-            opacity: 0.8;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--white);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            border-radius: 10px;
+        .hero-image {
+            background: linear-gradient(145deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 12px;
+            height: 320px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            color: #9ca3af;
+            font-size: 13px;
+            gap: 16px;
         }
 
-        .about-text h3 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
+        .hero-image svg {
+            width: 80px;
+            height: 80px;
+            opacity: 0.5;
+        }
+
+        .hero-image span {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .subscribe-box {
+            background: #f9fafb;
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .subscribe-box h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1f2937;
+        }
+
+        .subscribe-box > p {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-box input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            background: #fff;
+        }
+
+        .subscribe-box input:focus {
+            outline: none;
+            border-color: #c9a87c;
+        }
+
+        .subscribe-box button {
+            width: 100%;
+            background: #1f2937;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .subscribe-box button:hover {
+            background: #374151;
+        }
+
+        .subscribe-box .privacy {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 12px;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            padding: 60px;
+            text-align: center;
+            border-top: 1px solid #f3f4f6;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .quote-section blockquote {
+            font-size: 20px;
+            color: #1f2937;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .quote-section cite {
+            display: block;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #9ca3af;
+            font-style: normal;
             font-weight: 400;
         }
 
-        .about-text p {
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
+        /* Sections */
+        .section {
+            padding: 80px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        /* Services Section */
-        .services {
-            background: var(--light);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 3rem 2rem;
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 24px;
             text-align: center;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            letter-spacing: -0.5px;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 15px;
+            line-height: 1.9;
+            color: #6b7280;
+            text-align: center;
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+        /* Who Would Benefit */
+        .benefit-section {
+            padding: 80px 60px;
+            background: #fafafa;
         }
 
-        .service-card h3 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 500;
+        .benefit-section .section-title {
+            margin-bottom: 48px;
         }
 
-        .service-card p {
-            opacity: 0.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-price {
-            font-size: 1.5rem;
-            color: var(--accent);
-            font-weight: 500;
-        }
-
-        /* Treatments Section */
-        .treatments {
-            background: var(--white);
-        }
-
-        .treatments-grid {
+        .benefit-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
         }
 
-        .treatment-card {
-            display: flex;
-            background: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
+        .benefit-list {
+            list-style: none;
         }
 
-        .treatment-image {
-            width: 200px;
-            min-height: 200px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+        .benefit-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #6b7280;
+        }
+
+        .benefit-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background: #c9a87c;
+            border-radius: 50%;
+        }
+
+        .benefit-image {
+            background: linear-gradient(145deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 12px;
+            height: 400px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            color: #9ca3af;
+            font-size: 13px;
+            gap: 16px;
         }
 
-        .treatment-info {
-            padding: 2rem;
-            flex: 1;
+        .benefit-image svg {
+            width: 60px;
+            height: 60px;
+            opacity: 0.5;
         }
 
-        .treatment-info h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-
-        .treatment-info p {
-            opacity: 0.8;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .treatment-details {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        .treatment-details span {
-            color: var(--accent);
+        .benefit-image span {
             font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Approach Section */
+        .approach-section {
+            padding: 80px 60px;
+            background: #1f2937;
+        }
+
+        .approach-section .section-title {
+            color: #fff;
+            margin-bottom: 48px;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .approach-card {
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .approach-card h4 {
+            color: #1f2937;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .approach-card p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #6b7280;
         }
 
         /* Testimonials */
-        .testimonials {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-            color: var(--white);
+        .testimonials-section {
+            padding: 80px 60px;
         }
 
-        .testimonials .section-title h2 {
-            color: var(--white);
-        }
-
-        .testimonials .section-title p {
-            color: var(--secondary);
+        .testimonials-section .section-title {
+            margin-bottom: 48px;
         }
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
+            padding: 28px;
+            border-radius: 12px;
+            background: #f9fafb;
         }
 
         .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #6b7280;
+            margin-bottom: 20px;
         }
 
-        .testimonial-author {
+        .testimonial-card .author {
+            color: #1f2937;
             font-weight: 500;
-            color: var(--accent);
+            font-size: 14px;
         }
 
-        .stars {
-            color: var(--accent);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        /* Products Section */
-        .products {
-            background: var(--light);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-image {
-            height: 200px;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-
-        .product-info {
-            padding: 1.5rem;
+        /* Info Banner */
+        .info-banner {
+            padding: 16px 60px;
             text-align: center;
+            font-size: 13px;
+            color: #9ca3af;
+            border-top: 1px solid #f3f4f6;
         }
 
-        .product-info h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+        .info-banner a {
+            color: #c9a87c;
+            text-decoration: none;
         }
 
-        .product-info p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-bottom: 1rem;
-        }
-
-        .product-price {
-            color: var(--accent);
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--white);
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-info .icon {
-            font-size: 1.2rem;
-        }
-
-        .hours {
-            margin-top: 2rem;
-        }
-
-        .hours h4 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .hours p {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border: 1px solid var(--secondary);
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        .contact-form button {
-            width: 100%;
-            padding: 1rem;
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .contact-form button:hover {
-            background: var(--accent);
+        .info-banner a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 4rem 10% 2rem;
+        .footer {
+            background: #1f2937;
+            padding: 60px;
+            color: #9ca3af;
         }
 
-        .footer-content {
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .footer-section h4 {
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
+        .footer h5 {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .footer-section p,
-        .footer-section a {
-            color: var(--secondary);
+        .footer p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer a {
             text-decoration: none;
             display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #9ca3af;
+            transition: color 0.2s;
         }
 
-        .footer-section a:hover {
-            color: var(--accent);
+        .footer a:hover {
+            color: #fff;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border: 1px solid var(--secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 1024px) {
-            .services-grid,
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 40px;
+            }
+
+            .hero-image {
+                height: 280px;
+            }
+
+            .approach-grid,
             .testimonials-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .benefit-grid {
+                grid-template-columns: 1fr;
             }
 
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
+            .benefit-image {
+                height: 300px;
             }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .header {
+                padding: 16px 24px;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .hero,
+            .section,
+            .benefit-section,
+            .approach-section,
+            .testimonials-section,
+            .footer {
+                padding: 48px 24px;
             }
 
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 32px;
             }
 
-            .about-content,
-            .contact-content {
+            .section-title {
+                font-size: 26px;
+            }
+
+            .approach-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
-            .services-grid,
-            .testimonials-grid,
-            .treatments-grid {
+            .footer-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
 
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .treatment-card {
-                flex-direction: column;
-            }
-
-            .treatment-image {
-                width: 100%;
-                height: 150px;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 4rem 5%;
+            .info-banner {
+                padding: 16px 24px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">SERENITY</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#treatments">Treatments</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Book Now</a></li>
-        </ul>
-    </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Marylee Marre Functional Medicine</div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Meet Marylee</a>
+            <a href="#">How I Help</a>
+            <a href="#">The Program</a>
+            <a href="#">Pricing & Booking</a>
+            <a href="#">Contact</a>
+            <a href="#" class="book-btn">Book Now</a>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="hero-content">
-            <h1>SERENITY SPA</h1>
-            <p>LUXURY SKINCARE & WELLNESS</p>
-            <a href="#contact" class="btn">BOOK YOUR EXPERIENCE</a>
+            <h3>Functional & Integrative Medicine</h3>
+            <h1>Marylee Marre</h1>
+            <p class="subtitle">DNP, FNP-BC, IFMCP | Board Certified Nurse Practitioner</p>
+            <p>Uncovering the root cause of your symptoms through personalized care, specialty lab testing, and natural healing modalities. Your body has the power to heal itself - let me help you unlock it.</p>
+            <button class="cta-btn">Schedule A 15-Minute Discovery Call</button>
+        </div>
+        <div class="hero-image">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <span>Photo of Marylee</span>
+        </div>
+        <div class="subscribe-box">
+            <h4>Subscribe</h4>
+            <p>Get newsletters, updates & special promotions</p>
+            <input type="email" placeholder="Email Address">
+            <button>Sign Up</button>
+            <p class="privacy">We respect your privacy.</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="section-title">
-            <h2>WELCOME TO SERENITY</h2>
-            <p>Where relaxation meets rejuvenation</p>
-        </div>
-        <div class="about-content">
-            <div class="about-image">&#127807;</div>
-            <div class="about-text">
-                <h3>Your Journey to Radiant Skin Begins Here</h3>
-                <p>At Serenity Spa & Skincare, we believe that true beauty comes from within. Our expert aestheticians combine ancient wellness traditions with cutting-edge skincare technology to create personalized treatments that nurture your skin and soul.</p>
-                <p>Nestled in a tranquil setting, our spa offers a sanctuary from the everyday stress. Each treatment is thoughtfully designed to address your unique skincare concerns while providing a deeply relaxing experience.</p>
-                <p>We use only premium, sustainably-sourced products that are gentle on your skin and the environment. From organic facials to therapeutic massages, every service is crafted to help you look and feel your absolute best.</p>
-                <a href="#services" class="btn">Explore Our Services</a>
-            </div>
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <blockquote>
+            "The body is miraculous, given the right tools it can truly heal itself"
+            <cite>— Functional Medicine Philosophy</cite>
+        </blockquote>
+    </section>
+
+    <!-- What is Functional Medicine -->
+    <section class="section">
+        <h2 class="section-title">What is Functional Medicine?</h2>
+        <div class="section-content">
+            <p>It is a way of identifying and addressing the root cause of your symptoms through specialty lab testing and consultation. We use optimal lab ranges instead of conventional lab ranges as a preventative and optimal approach to your health. This means that the reference ranges we use may vary from what your conventional provider uses. After identification of the root cause environmental toxins (mold, parasites, heavy metals, Lyme, latent viruses) due to chronic stressors (gut dysbiosis, SIBO, micronutrient deficiencies, food sensitivities, leaky gut, etc.), I will give your body the necessary tools it needs to heal itself. These tools consist of lifestyle changes including quality sleep, destressing techniques, diet changes, movement and supplements as well as other modalities such as guidance/referrals for acupuncture, chiropractic, IV/IM therapy, peptide therapy, infrared sauna, cold therapy and/or PEMF therapy if necessary.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-title">
-            <h2>OUR SERVICES</h2>
-            <p>Discover our range of luxurious treatments</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">&#128142;</div>
-                <h3>Signature Facials</h3>
-                <p>Customized facial treatments using premium products to address your specific skin concerns and reveal your natural glow.</p>
-                <span class="service-price">From $120</span>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">&#127808;</div>
-                <h3>Body Treatments</h3>
-                <p>Luxurious body wraps, scrubs, and massages designed to detoxify, hydrate, and rejuvenate your entire body.</p>
-                <span class="service-price">From $150</span>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">&#9889;</div>
-                <h3>Advanced Skincare</h3>
-                <p>Cutting-edge treatments including microdermabrasion, chemical peels, and LED therapy for transformative results.</p>
-                <span class="service-price">From $180</span>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">&#128156;</div>
-                <h3>Massage Therapy</h3>
-                <p>Expert massage techniques from Swedish to deep tissue, designed to relieve tension and promote total relaxation.</p>
-                <span class="service-price">From $100</span>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">&#10024;</div>
-                <h3>Anti-Aging</h3>
-                <p>Revolutionary treatments targeting fine lines, wrinkles, and loss of firmness for a more youthful appearance.</p>
-                <span class="service-price">From $200</span>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">&#127774;</div>
-                <h3>Wellness Packages</h3>
-                <p>Curated spa experiences combining multiple treatments for the ultimate day of pampering and self-care.</p>
-                <span class="service-price">From $350</span>
+    <!-- Who Would Benefit -->
+    <section class="benefit-section">
+        <h2 class="section-title">Who Would Benefit from Working with Us?</h2>
+        <div class="benefit-grid">
+            <ul class="benefit-list">
+                <li>Someone who is committed to their health journey.</li>
+                <li>Someone who wants answers to their vague symptoms such as low energy, headaches, brain fog, acne, insomnia, irritability, irregular cycles, depression and anxiety like feelings or "feeling sick".</li>
+                <li>Someone who wants to understand their body and the ways they can optimize their health.</li>
+                <li>Someone who wants to be given natural tools to help improve their current health conditions.</li>
+                <li>Someone who wants unhurried visits with their provider where they feel genuinely heard, are provided with detailed education including thorough interpretation of their labs and given a customized, comprehensive plan.</li>
+                <li>Someone who is fed up overwhelmed by all the "health and wellness" information found on social media and needs help streamlining to match their particular needs.</li>
+            </ul>
+            <div class="benefit-image">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <span>Wellness Image</span>
             </div>
         </div>
     </section>
 
-    <!-- Treatments Section -->
-    <section class="treatments" id="treatments">
-        <div class="section-title">
-            <h2>FEATURED TREATMENTS</h2>
-            <p>Our most popular skincare experiences</p>
-        </div>
-        <div class="treatments-grid">
-            <div class="treatment-card">
-                <div class="treatment-image">&#127812;</div>
-                <div class="treatment-info">
-                    <h3>Hydrating Rose Facial</h3>
-                    <p>A deeply nourishing treatment featuring rose extracts and hyaluronic acid to plump and hydrate dehydrated skin.</p>
-                    <div class="treatment-details">
-                        <span>60 min</span>
-                        <span>$145</span>
-                    </div>
-                </div>
+    <!-- My Approach to Your Care -->
+    <section class="approach-section">
+        <h2 class="section-title">My Approach to Your Care</h2>
+        <div class="approach-grid">
+            <div class="approach-card">
+                <h4>Compassionate Care</h4>
+                <p>Genuinely and wholeheartedly listening to your concerns. Being present, taking time to connect to your health needs.</p>
             </div>
-            <div class="treatment-card">
-                <div class="treatment-image">&#127813;</div>
-                <div class="treatment-info">
-                    <h3>Vitamin C Brightening</h3>
-                    <p>Combat dullness and uneven skin tone with this powerful vitamin C infusion that reveals radiant, glowing skin.</p>
-                    <div class="treatment-details">
-                        <span>75 min</span>
-                        <span>$175</span>
-                    </div>
-                </div>
+            <div class="approach-card">
+                <h4>Comprehensive Visits</h4>
+                <p>Starting with a thorough, uninterrupted 90-minute intake to discuss your health journey, lifestyle, prioritizing your health goals and concerns, symptoms, medical and surgical history, family and social history, lifestyle habits. We do a deep dive into each of these sections.</p>
             </div>
-            <div class="treatment-card">
-                <div class="treatment-image">&#127795;</div>
-                <div class="treatment-info">
-                    <h3>Botanical Detox Wrap</h3>
-                    <p>A full-body treatment using organic botanicals to draw out impurities and leave skin silky smooth.</p>
-                    <div class="treatment-details">
-                        <span>90 min</span>
-                        <span>$195</span>
-                    </div>
-                </div>
+            <div class="approach-card">
+                <h4>Natural Modalities</h4>
+                <p>Natural therapies that work with your body to help you heal from the inside out. Supplements, nutraceuticals, botanicals, acupuncture, lifestyle changes such as destressing techniques, quality sleep, daily movement, and a clean diet.</p>
             </div>
-            <div class="treatment-card">
-                <div class="treatment-image">&#128171;</div>
-                <div class="treatment-info">
-                    <h3>Collagen Boost Therapy</h3>
-                    <p>Advanced treatment combining microcurrent and collagen masks to firm, lift, and restore youthful elasticity.</p>
-                    <div class="treatment-details">
-                        <span>90 min</span>
-                        <span>$250</span>
-                    </div>
-                </div>
+            <div class="approach-card">
+                <h4>Customized Protocol</h4>
+                <p>After each visit you will receive an updated protocol outlining your next steps and the important items that we discussed in the consultation. We are here to support you along the way.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="section-title">
-            <h2>CLIENT EXPERIENCES</h2>
-            <p>What our guests are saying</p>
-        </div>
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <h2 class="section-title">Patient Testimonials</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"The most relaxing spa experience I've ever had. The staff is incredibly knowledgeable and the facials have transformed my skin!"</p>
-                <span class="testimonial-author">- Sarah M.</span>
+                <p>"Marylee is amazing! I can tell she really cares about her patients and is passionate about what she does. She was attentive and gave me good feedback. Marylee is extremely knowledgeable in various ailments and supplements. She has taught me so much!"</p>
+                <span class="author">— Megan</span>
             </div>
             <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"Serenity Spa is my monthly escape. The atmosphere is peaceful and the treatments are consistently excellent. Highly recommend!"</p>
-                <span class="testimonial-author">- Jennifer L.</span>
+                <p>"Marylee has been fantastic! From day one her comprehensive working knowledge of functional medicine was exactly what I was looking for. Someone that takes the time to listen, understand my concerns and implement a plan beyond what I could have ever imagined."</p>
+                <span class="author">— Benjamin</span>
             </div>
             <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"After struggling with sensitive skin for years, their customized approach finally gave me the results I was looking for. Amazing!"</p>
-                <span class="testimonial-author">- Michelle K.</span>
+                <p>"I highly recommend Marylee Marie. My first appointment was very comprehensive, and she spent time to fully understand and ask thought-provoking questions before offering any suggestions and went beyond what I've ever experienced. I'm very pleased with my experience for sure!"</p>
+                <span class="author">— Marcel</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"I have seen Marylee a couple of times now and cannot recommend her enough! Excellent bedside manner, thorough explanations, life-changing experience. I was suffering from chronic headaches, fatigue and restless nights. Now I get so much better time with each visit."</p>
+                <span class="author">— Tyler</span>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <div class="section-title">
-            <h2>SKINCARE COLLECTION</h2>
-            <p>Take the spa experience home</p>
-        </div>
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image">&#129523;</div>
-                <div class="product-info">
-                    <h3>Renewal Serum</h3>
-                    <p>Vitamin C & Retinol blend</p>
-                    <span class="product-price">$85</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">&#127807;</div>
-                <div class="product-info">
-                    <h3>Hydra Cream</h3>
-                    <p>Deep moisture complex</p>
-                    <span class="product-price">$65</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">&#10024;</div>
-                <div class="product-info">
-                    <h3>Glow Mask</h3>
-                    <p>Weekly brightening treatment</p>
-                    <span class="product-price">$55</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">&#128167;</div>
-                <div class="product-info">
-                    <h3>Eye Elixir</h3>
-                    <p>Anti-aging eye treatment</p>
-                    <span class="product-price">$75</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-title">
-            <h2>BOOK YOUR VISIT</h2>
-            <p>Begin your journey to beautiful skin</p>
-        </div>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Visit Us</h3>
-                <p><span class="icon">&#128205;</span> 123 Wellness Avenue, Suite 100<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beverly Hills, CA 90210</p>
-                <p><span class="icon">&#128222;</span> (555) 123-4567</p>
-                <p><span class="icon">&#128231;</span> hello@serenityspa.com</p>
-
-                <div class="hours">
-                    <h4>Hours of Operation</h4>
-                    <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
-                    <p>Saturday: 9:00 AM - 6:00 PM</p>
-                    <p>Sunday: 10:00 AM - 5:00 PM</p>
-                </div>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number">
-                <select>
-                    <option value="">Select a Service</option>
-                    <option value="facial">Signature Facial</option>
-                    <option value="body">Body Treatment</option>
-                    <option value="advanced">Advanced Skincare</option>
-                    <option value="massage">Massage Therapy</option>
-                    <option value="antiaging">Anti-Aging Treatment</option>
-                    <option value="package">Wellness Package</option>
-                </select>
-                <textarea placeholder="Special requests or questions..."></textarea>
-                <button type="submit">REQUEST APPOINTMENT</button>
-            </form>
-        </div>
-    </section>
+    <!-- Info Banner -->
+    <div class="info-banner">
+        <p>Serving Florida & Virtual Patients Nationwide | Relocating to Tennessee May 2024 | <a href="#">View something: Or send this to a friend</a></p>
+    </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>SERENITY SPA</h4>
-                <p>Your destination for luxury skincare and wellness. Experience the art of relaxation and rejuvenation.</p>
-                <div class="social-links">
-                    <a href="#">&#102;</a>
-                    <a href="#">&#105;</a>
-                    <a href="#">&#116;</a>
-                    <a href="#">&#112;</a>
-                </div>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h5>Current Location</h5>
+                <p>8800 SW 87th Street, Suite B 201<br>
+                Miami Beach, Florida 33176<br><br>
+                Virtual consultations available nationwide</p>
             </div>
-            <div class="footer-section">
-                <h4>QUICK LINKS</h4>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#treatments">Treatments</a>
-                <a href="#products">Products</a>
-                <a href="#contact">Contact</a>
+            <div>
+                <h5>Quick Links</h5>
+                <a href="#">Meet Marylee</a>
+                <a href="#">How I Help</a>
+                <a href="#">The Program</a>
             </div>
-            <div class="footer-section">
-                <h4>SERVICES</h4>
-                <a href="#">Facials</a>
-                <a href="#">Body Treatments</a>
-                <a href="#">Massage</a>
-                <a href="#">Anti-Aging</a>
-                <a href="#">Gift Cards</a>
+            <div>
+                <h5>Shop Supplements</h5>
+                <p>Access professional-grade supplements through your Fullscript dispensary</p>
             </div>
-            <div class="footer-section">
-                <h4>CONTACT</h4>
-                <p>123 Wellness Avenue</p>
-                <p>Beverly Hills, CA 90210</p>
-                <p>(555) 123-4567</p>
-                <p>hello@serenityspa.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Serenity Spa & Skincare. All rights reserved.</p>
         </div>
     </footer>
 </body>
